@@ -4,7 +4,7 @@ window.onload = function () {
     let activeList = document.getElementById("active-tasks");
     let completedList = document.getElementById("completed-tasks");
     let button = document.createElement("div"); // create new div
-    let remove = document.createElement('button');   // create button element
+    let remove = document.createElement('button'); // create button element
 
 
     enterKeyPressed.addEventListener("keypress", addTask);
@@ -16,10 +16,10 @@ window.onload = function () {
                 let listElement = document.createElement("LI");
                 let textNode = document.createTextNode(task);
                 listElement.appendChild(textNode);
-                remove.innerText = "Delete"; 
-                button.appendChild(remove);  // add delete button to div
+                remove.innerText = "Delete";
+                button.appendChild(remove); // add delete button to div
                 listElement.appendChild(button); // append delete button to list element
-                button.setAttribute("id", "deleteButton");
+                console.log("OK so far");
                 document.getElementById("active-tasks").appendChild(listElement);
                 document.getElementById("task").value = ''; // resets task box
             }
@@ -28,28 +28,31 @@ window.onload = function () {
 
 
     button.addEventListener("click", deleteTask);
+
     function deleteTask() {
         console.log("Success!"); // test
-        this.parentNode.removeChild(this);
+        this.parentNode.remove(this);
     }
 
-    /*
+
     activeList.addEventListener("click", completeTask);
 
     function completeTask(click) {
         let clickedTask = click.target;
         console.log(clickedTask);
-        completedList.appendChild(click.target);
+        if (clickedTask != "button") {
+            completedList.appendChild(click.target);
+        }
     }
-    
-/*   activeList.addEventListener("click", deleteTask);
 
-    function deleteTask(click) {
-        let clickedTask = click.target;
-        console.log(clickedTask);
-        activeList.removeChild(click.target);
-    } 
-*/
+    /*   activeList.addEventListener("click", deleteTask);
+
+        function deleteTask(click) {
+            let clickedTask = click.target;
+            console.log(clickedTask);
+            activeList.removeChild(click.target);
+        } 
+    */
 
 
 
