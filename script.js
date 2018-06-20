@@ -14,11 +14,10 @@ window.onload = function () {
             let task = document.getElementById("task").value;
             if (task) { // check task box isn't empty
                 let listElement = document.createElement("LI");
-                let textNode = document.createTextNode(task);
-                listElement.appendChild(textNode);
+                listElement.textContent = task;
                 remove.innerText = "Delete";
                 button.appendChild(remove); // add delete button to div
-                listElement.appendChild(button); // append delete button to list element
+                listElement.appendChild(button.cloneNode(true)); // append delete button to list element
                 console.log("OK so far");
                 document.getElementById("active-tasks").appendChild(listElement);
                 document.getElementById("task").value = ''; // resets task box
@@ -27,23 +26,23 @@ window.onload = function () {
     }
 
 
-    button.addEventListener("click", deleteTask);
+    remove.addEventListener("click", deleteTask);
 
     function deleteTask() {
-        console.log("Success!"); // test
-        this.parentNode.remove(this);
+        this.parentNode.remove(this); // IDEA: also remove childNode?
+       // activeList.removeChild(click.target);
     }
 
 
-    activeList.addEventListener("click", completeTask);
+/*    activeList.addEventListener("click", completeTask);
 
-    function completeTask(click) {
-        let clickedTask = click.target;
-        console.log(clickedTask);
-        if (clickedTask != "button") {
-            completedList.appendChild(click.target);
+    function completeTask(element) {
+        console.log(element.tagName);
+        let clickedTask = element.target;
+        if (clickedTask.tagName !== 'BUTTON') {
+            completedList.appendChild(clickedTask);
         }
-    }
+    } */
 
     /*   activeList.addEventListener("click", deleteTask);
 
