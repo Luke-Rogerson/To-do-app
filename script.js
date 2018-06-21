@@ -46,6 +46,15 @@ window.onload = function () {
         }
     }
 
+    completedList.addEventListener("click", uncompleteTask);
+
+    function uncompleteTask(event) {
+        let clickedTask = event.target;
+        if (clickedTask.tagName !== 'BUTTON') {
+            activeList.appendChild(clickedTask);
+        }
+    }
+
 
 
 
