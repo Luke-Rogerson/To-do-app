@@ -8,19 +8,30 @@ window.onload = function () {
     let remove = document.createElement('button'); // create button element
     remove.innerText = "Delete"; //set button text to "Delete"
     button.appendChild(remove); // add delete button to div
-    const newBtn = button.cloneNode(true);
+   
+    /*
+    Get the users input.
+    Create the list element.
+    Clone the delete button element.
+    Assign the users input to the list element textcontent.
+    Append the button to the list element.
+    Add the eventListener to the button.
+    Append the task to the active task section.
+    Clear the user input.
+    */
 
 
     enterKeyPressed.addEventListener("keypress", addTask);
 
     function addTask(e) {
         if (e.keyCode == 13) { // check if enter key pressed
-            let task = document.getElementById("task").value;
+            let task = document.getElementById("task").value; 
             if (task) { // check task box isn't empty
                 let listElement = document.createElement("LI");
                 listElement.textContent = task;
+                let newBtn = button.cloneNode(true);
+                newBtn.addEventListener("click", deleteTask);
                 listElement.appendChild(newBtn);
-                console.log("OK so far");
                 document.getElementById("active-tasks").appendChild(listElement);
                 document.getElementById("task").value = ''; // resets task box
             }
@@ -28,18 +39,16 @@ window.onload = function () {
     }
 
    
-    newBtn.addEventListener("click", deleteTask);
+   // newBtn.addEventListener("click", deleteTask);
     function deleteTask() {
         this.parentNode.remove(this); // IDEA: also remove childNode?
         console.log("Task deleted");
-        // activeList.removeChild(click.target);
     }
 
 
     activeList.addEventListener("click", completeTask);
 
     function completeTask(event) {
-        console.log(event.target.tagName);
         let clickedTask = event.target;
         if (clickedTask.tagName !== 'BUTTON') {
             completedList.appendChild(clickedTask);
