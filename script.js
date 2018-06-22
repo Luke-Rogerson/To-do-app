@@ -64,11 +64,4 @@ window.onload = function () {
         }
     }
 
-
-
-
-    // add a button to click to remove task
-    // add ability to click to move task to completed div and "strikethrough" task
-
-
 }

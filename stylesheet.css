@@ -48,6 +48,10 @@ body {
   display: block;
 }
 
+#completed-tasks {
+  text-decoration: line-through;
+}
+
 
 
 /* ---------CSS for text box-------------- */
