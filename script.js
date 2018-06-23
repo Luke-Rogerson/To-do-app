@@ -8,6 +8,7 @@ window.onload = function () {
     let remove = document.createElement('button'); // create button element
     remove.innerText = "Delete"; //set button text to "Delete"
     button.appendChild(remove); // add delete button to div
+    button.setAttribute("class", "list-buttons");
    
     /*
     Get the users input.

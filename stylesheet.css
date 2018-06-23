@@ -4,7 +4,7 @@
   height: 95%;
   display: grid;
   grid-gap: 2px;
-  grid-template-columns: minmax(360px, 500px);
+  grid-template-columns: minmax(330px, 500px);
   grid-template-rows: 1fr 1fr 5fr 5fr 1fr; 
 }
 
@@ -42,6 +42,8 @@ body {
 .footer {
   background-color: #f44242;
   border-radius: 10px;
+  display: inline-block;
+  text-align: center;
 }
 
 #active-tasks {
@@ -50,6 +52,22 @@ body {
 
 #completed-tasks {
   text-decoration: line-through;
+}
+
+ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+h1 {
+  font-size: 1em;
+}
+
+.list-buttons {
+  position: fixed;
+  left: 80px;
+  top: 20px;
 }
 
 
@@ -100,10 +118,9 @@ html {
 
 body {
   display: flex;
-  align-items: center;
   justify-content: center;
   overflow: hidden;
-  width: 100vw;
+  /*width: 100vw;*/
   height: 100vh;
   color: #455A64;
   font-family: var(--fontFamily);
