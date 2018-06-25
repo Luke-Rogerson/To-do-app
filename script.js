@@ -9,6 +9,7 @@ window.onload = function () {
     remove.innerText = "Delete"; //set button text to "Delete"
     button.appendChild(remove); // add delete button to div
     button.setAttribute("class", "list-buttons");
+    remove.setAttribute("class", "buttons");
    
     /*
     Get the users input.
