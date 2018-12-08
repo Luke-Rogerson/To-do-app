@@ -14,5 +14,5 @@ Some additions for the future:-
 
 Feel free to use my app for your own learning! If you're also just getting into programming like me, I really recommend you also have a go at building your own to-do app! You'll learn so much!
 
-![A screenshot of the todo app](/screenshots/todo1.png?raw=true =250x "Screenshot #1")
-![A screenshot of the todo app](/screenshots/todo2.png?raw=true =250x "Screenshot #2")
+![A screenshot of the todo app](/screenshots/todo1.png?raw=true | width=100 "Screenshot #1")
+![A screenshot of the todo app](/screenshots/todo2.png?raw=true | width=100 "Screenshot #2")
