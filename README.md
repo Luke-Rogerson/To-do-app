@@ -14,5 +14,5 @@ Tidying up the CSS. It's a total mess right now!
 And more!
 Feel free to use my app for your own learning! If you're also just getting into programming like me, I really recommend you also have a go at building your own to-do app! You'll learn so much!
 
-![A screenshot of the todo app](/screenshot/todo1.png?raw=true "#1")
-![A screenshot of the todo app](/screenshot/todo2.png?raw=true "#2")
+![A screenshot of the todo app](/screenshots/todo1.png?raw=true "#1")
+![A screenshot of the todo app](/screenshots/todo2.png?raw=true "#2")
