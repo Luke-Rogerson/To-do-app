@@ -13,3 +13,6 @@ Some additions for the future:-
 - And more!
 
 Feel free to use my app for your own learning! If you're also just getting into programming like me, I really recommend you also have a go at building your own to-do app! You'll learn so much!
+
+![A screenshot of the todo app](/screenshots/todo1.png?raw=true "Screenshot #1")
+![A screenshot of the todo app](/screenshots/todo2.png?raw=true "Screenshot #2")
